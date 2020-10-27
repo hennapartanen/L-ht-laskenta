@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CounterApp - Login </title>
+    <title>CounterApp - New counter </title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/kissa.css">
 </head>
@@ -18,7 +18,7 @@
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Features</a>
@@ -29,35 +29,37 @@
 
   </div>
   <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" id="back" class="btn btn-secondary" onClick="location.href='register.php'">Register</button>
+        <button type="button" id="back" class="btn btn-secondary" onClick="location.href='login.php'">Log off</button>
       </div>
 </nav>
-
-</script>
 <div class="jumbotron">
-    <h1> Login to CounterApp </h1>
+   
+<div class="countdown-container">
+    <div class="countdown-element days-c">
+      <h1 class="display-3" id="days">0</h1>
+      <span>Days</span>
     </div>
 
-    <div class="container">
-
-    <form action="check_login.php" method="post">
-    <div class="form-group">
-    
-    <label for="username"> Username</label>
-    <input class="form-control" type="text" name="username">
-
-    <label for="passwd"> Password </label>
-    <input class="form-control" type="password" name="passwd">
-
+    <div class="countdown-element hours-c">
+    <h1 class="display-3" id="hours">0</h1>
+      <span>Hours</span>
     </div>
 
-    <input type="submit" class="btn btn-primary" value="Login" >
+    <div class="countdown-element mins-c">
+        <h1 class ="display-3" id="mins">0</h1>
+      <span>Minutes</span>
+    </div>
 
-    
-    </form>
-
+    <div class="countdown-element seconds-c">
+        <h1 class="display-3" id="seconds">0</h1>
+      <span>Seconds</span>
+   
+    </div>
+</div>
+ 
 
 <script src=".js/jquery.min.js"></script>
+<script src=".js/new_counter.js"></script>
 <script src=".js/bootstrap.min.js"></script>
 </body>
 </html>

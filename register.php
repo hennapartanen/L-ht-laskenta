@@ -22,14 +22,20 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Features</a>
       </li>
+      
   </ul>
 
   </div>
+  <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" id="back" class="btn btn-secondary" onClick="location.href='login.php'">Log in</button>
+      </div>
 </nav>
 
 <div class="jumbotron">
     <h1> Register to CounterApp </h1>
     </div>
+
+
 
     <div class="container">
 

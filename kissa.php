@@ -29,7 +29,7 @@
     </div>
 
         <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button"id="back" class="btn btn-secondary">Log off</button>
+        <button type="button"id="back" class="btn btn-secondary" onClick="location.href='login.php'">Log off</button>
     </div>
 
   </nav>
@@ -39,9 +39,9 @@
     <div class="jumbotron">
         <h1 class="display-3">You dont have any counters</h1>
         <p class="lead">Add counters from button belove</p>
-        <hr class="my-4">
-        <p class="lead">
-          <a class="btn btn-primary btn-lg"  id="button" role="button">New counter</a>
+        
+  
+          <a class="btn btn-primary btn-lg"  id="button" role="button" onClick="location.href='counter.html'"New counter> New counter</a>
         </p>
       </div>
 </body>

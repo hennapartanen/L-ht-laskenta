@@ -12,12 +12,14 @@ try {
     $data = $stmt->fetch();
 
     if ($data == false) {
-        echo 'Käyttäjää ei löytynyt';
+        echo 'User not found';
     }
-
+    else {
+        header("Location: kissa.php") ;
+       }
+       
 } catch(PDOException $e) {
     echo "Error: ". $e->getMessage();
 
 }
 
-$conn = null;
