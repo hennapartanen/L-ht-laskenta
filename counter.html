@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CounterApp - New counter </title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/kissa.css">
+    <link rel="stylesheet" type="text/css" href="./css/kissa.css">
 </head>
 <body>
     
@@ -37,85 +37,18 @@
 <div class="jumbotron">
     <h1> Make new counter </h1>
     </div>
-
-    <div class="container">
-
-        <form action="countershow.html" method="post">
-        <div class="form-group">
-        
-        <label for="eventname"> Event name</label>
-        <input class="form-control" type="text" name="eventname">
-
-
-    <table>
-<tr>
-        <td class="ml">
-            <label for="Day"> Day </label>
-        </td>
-       
-                 <td>
-       
-                 <input tad-va="date" placeholder="dd" type="text" autocomplete="off" onfocus="ifc(this,'d')"
-                  pattern="[0-9]*" maxlength="2" size="3" id="day" value="28" onblur="cht()">
-             </td> 
-            </tr>
-         <tr>
-
-        <td class="ml">
-             <label for="month">Month</label>
-     </td>
- <td>
-            <input tad-va="date" placeholder="text" autocomplete="off" onfocus="ifc(this,'m')"
-              maxlength="12" size="2" id="month" value="10" onblur="cth()">
-      </td>
-
-  </tr>
-  <tr>
-      <td class="ml">
-       <label for="year">Year</laber>
-       </td>
-
-     <td>
-
-           <input placeholder="yyyy" type="text" autocomplete="off" tad-va="date" onfocus="idc(this,'y')"
-            pattern="[0-9]*" maxlength="4" size="5" id="year" value="2020" onblur="cht()">
-
-  </td>
-
-      </tr>
-     </body>
-    </table>
-      
-    <table>
-        <tbody>
-            <tr>
-                <td>
-                    <img class="christ" src="pics/christ.jpg" width="400" height="300" alt="Christmas"
-                    id="christ"onclick="christ('100')">
-                    <div class="imgtext">Christmas</div>
-                </td>
-                <td>
-                    <img class="newyear" src="pics/newyear.jpg" width="400" height="300" alt="Newyear"
-                    id="newyear"onclick="christ('100')">
-                    <div class="imgtext">New year</div>
-                </td>
-                <td>
-                    <img class="vacation" src="pics/vacation.jpg" width="400" height="300" alt="Vacation"
-                    id="vacation"onclick="christ('100')">
-                    <div class="imgtext">Vacation</div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-        </div>
     
-        <input type="submit" class="btn btn-primary" value="Make counter">
-
-
  
+    <div id="calc">
+        <p id="demo"></p>
+    Date:<input id="date" type="date" name="task_date" />
+    Time:<input id="time" type="time" name="task_time" />
+    <button id="calc">Get Time</button>
+</div>
 
-<script src=".js/jquery.min.js"></script>
-<script src=".js/new_counter.js"></script>
-<script src=".js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/new_counter.js"></script>
+<script src="css/bootstrap.min.css"></script>
+<script src="countershow.html"></script>
 </body>
 </html>

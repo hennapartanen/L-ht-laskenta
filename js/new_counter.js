@@ -1,34 +1,41 @@
-const daysElement = document.getElementById("days");
-const hoursElement = document.getElementById("hours");
-const minutesElement = document.getElementById("mins");
-const secondsElement = document.getElementById("seconds");
 
 
-const newEvent = "1 Jan 2021";
+var calc = document.getElementById("calc")
 
-function countdown() {
-  const newEventDate = new Date(newEvent);
-  const currentDate = new Date();
 
-  const totalSeconds = (newEventDate - currentDate) / 1000;
+calc.addEventListener("click", function() {
+    var date = document.getElementById("date").value,
+      time = document.getElementById("time").value
+    
+     
+  
+   var hi = new Date(date + " " + time).toISOString();
+ 
 
-  const days = Math.floor(totalSeconds / 3600 / 24);
-  const hours = Math.floor(totalSeconds / 3600) % 24;
-  const minutes = Math.floor(totalSeconds / 60) % 60;
-  const seconds = Math.floor(totalSeconds) % 60;
+var countDownDate = new Date(hi).getTime();
 
-  daysElement.innerHTML = timeFormat(days);
-  hoursElement.innerHTML = timeFormat(hours);
-  minutesElement.innerHTML = timeFormat(minutes);
-  secondsElement.innerHTML = timeFormat(seconds);
+
+var x = setInterval(function() {
+
+
+  var now = new Date().getTime();
+
+  var distance = countDownDate - now;
+    
+ 
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Counter is done ";
+  }
 }
+ 
 
-function timeFormat(time) {
-  return time < 10 ? `0${time}` : time;
-}
-
-
-countdown();
-
-setInterval(countdown, 1000);
-
+, 1000);})
