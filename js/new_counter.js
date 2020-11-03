@@ -1,31 +1,31 @@
 
 function startTime () {
 
-window.location.href="countershow.html";
-
-var calc = document.getElementById("calc")
-
-
 
     var date = document.getElementById("date").value,
-      time = document.getElementById("time").value
+    time = document.getElementById("time").value
     
      
-   var hi = new Date(date + " " + time).toISOString();
+     var hi = new Date(date + " " + time).toISOString();
  
 
-var countDownDate = new Date(hi).getTime();
+    var countDownDate = new Date(hi).getTime();
+
+  window.location.href = `countershow.html?cdd=${countDownDate}`;
+
+  window.addEventListener('load', function() {
+
+    var urlParams = new URLSearchParams(window.location.search);
+    console.log(window.location.search)
+    console.log(urlParams.get('cdd'));
 
 
-var x = setInterval(function() {
-
- 
-
+  
   var now = new Date().getTime();
+
 
   var distance = countDownDate - now;
     
- 
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -41,4 +41,4 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "Counter is done ";
   }
  
-}, 1000);}
+}, 1000)}
