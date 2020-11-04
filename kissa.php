@@ -45,7 +45,7 @@
         </p>
       </div>
 </body>
-<script src="new_counter.js"></script>
-<script src=".js/jquery.min.js"></script>
-<script src=".js/bootstrap.min.css"></script>
+
+<script src="js/jquery.min.js"></script>
+<script src="css/bootstrap.min.css"></script>
 </html>

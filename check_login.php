@@ -14,6 +14,7 @@ try {
     if ($data == false) {
         echo 'User not found';
     }
+    
     else {
         header("Location: kissa.php") ;
        }
