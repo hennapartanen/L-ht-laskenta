@@ -35,8 +35,6 @@ $stmt->bindParam(':passwd', $passwd);
 $stmt->bindParam(':email', $email);
 
 
-
-
 $stmt->execute();
 } catch(PDOException $e) {
     echo "Error: ". $e->getMessage();
