@@ -1,29 +1,34 @@
 
 
 #number {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-
-
 }
+
 h9 {
 
-   color: #000;
-  font-size: 80px;
-  margin: 40px 0px 20px;
+  color: #fff;
+  font-size: 100px;
+  margin: 20px 0px 20px;
   border-radius: 3px;
-
+  text-shadow: 1 5px 8px rgba(0,0,0,0.2) ;
 }
 
+h8 {
 
+  color: #fff;
+  font-size: 70px;
+  margin: 40px 0px 20px;
+  border-radius: 3px;
+  text-shadow: 0 5px 8px rgba(0,0,0,0.2) ;
+
+}
 #counter {
 
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+  font-size: 25px;
 
 }
 
@@ -37,13 +42,7 @@ h9 {
   align-items: center;
 }
 
-h8 {
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 20vh;
-font-size: 50px;
-}
+
 
 .modal {
 
@@ -62,6 +61,8 @@ font-size: 50px;
   display: flex;
   box-shadow: 0 5px 8px rgba(0,0,0,0.2) ;
    display: inline-block;
+   cursor: pointer;
+ 
 }
 
 #closeBtn {
@@ -82,12 +83,6 @@ font-size: 50px;
   to{opacity: 1}
 }
 
-img {
-
-  height: 300px;
-  width: 315px;
-  cursor: pointer;
-}
 
 #modalBtn {
 
@@ -103,4 +98,88 @@ img {
   margin: 2% auto;
   margin-left: 15% ;
   display: flex;
+
+
+}
+
+#count_name {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+}
+
+
+#namec {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 40px;
+  text-align: center;
+}
+
+#date {
+
+  width: 11%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+#time {
+
+  width: 11%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: center;
+ 
+}
+
+#countername {
+display: flex;
+flex-direction: column;
+text-align: center;
+text-shadow: 0 5px 8px rgba(0,0,0.2);
+
+}
+
+
+
+#countershow {
+
+  margin: 3% auto;
+  width: 70%;
+  box-shadow: 0 5px 8px rgba(0,0,0.2);
+  line-height: 300px;
+ 
+}
+
+#bgg  {
+  position:absolute;
+  z-index: -1;
+ height: 71%;
+ width: 70%;
+}
+
+
+#simpleModal img {
+
+  height: 300px;
+  width: 315px;
+  
+}
+
+#kuvia img {
+  height: 300px;
+  width: 315px;
+  
+
 }

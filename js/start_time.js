@@ -9,8 +9,18 @@ function startTime() {
     const cdd = urlParams.get('cdd')
      console.log(cdd);
   
+     const cn = urlParams.get('cn')
+     console.log(cn);
+
+     const cb = urlParams.get('cb')
+     console.log(cb);
+
 
     var countDownDate = cdd;
+
+    var header = cn;
+
+    var background = cb;
 
     var x = setInterval(function() {
 
@@ -34,4 +44,13 @@ function startTime() {
     document.getElementById("demo").innerHTML = "Counter is done ";
   }
  
- }) ;1000};
+ }) ;1000;
+
+
+
+ document.getElementById("countname").innerHTML = header;
+
+ document.getElementById("bgg").src = background;
+
+};
+

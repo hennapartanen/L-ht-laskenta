@@ -35,9 +35,13 @@
 
 
 
-   
+  
 
-<h8> Make new counter </h8>
+<div id="count_name">
+
+<input id="namec" type="text" name="count_name" placeholder="Name of the counter">
+
+</div>
 
  <div id="counter">
 
@@ -54,16 +58,15 @@
   
 </div>
 
-
-  <button id="modalBtn" class="btn btn-primary "> Choose the background</button>
+  <button id="modalBtn" class="btn btn-primary "> Choose a background</button>
 
 <div id="simpleModal" class="modal">
   <div class="modal-content">
   <span id="closeBtn">&times;</span>
-  <img src="pics/newyear.jpg" id= "newh" onclick="showpicn()" >
-  <img src="pics/christmas.jpg" id="chrish" onclick="showpicc()" >
-  <img src="pics/vacation.jpg" id="vach" onclick="showpicv()">
-  <img src="pics/emt.jpg" id="emth" onclick="showpice()">
+  <img src="pics/newyear.jpg" id= "newh" value="new" onclick="showpicn(this.id)" >
+  <img src="pics/christmas.jpg" id="chrish" value="chris" onclick="showpicc(this.id)" >
+  <img src="pics/vacation.jpg" id="vach" value="vac" onclick="showpicv(this.id)">
+  <img src="pics/emt.jpg" id="emth" value="emt" onclick="showpice(this.id)">
   </div>
 </div>
 
