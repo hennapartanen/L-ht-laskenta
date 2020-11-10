@@ -6,20 +6,20 @@
 
 h9 {
 
-  color: #fff;
+  color: #000;
   font-size: 100px;
   margin: 20px 0px 20px;
   border-radius: 3px;
-  text-shadow: 1 5px 8px rgba(0,0,0,0.2) ;
+  text-shadow: 0px 0px 20px #fff, 0px 0px 20px #fff;
 }
 
 h8 {
 
-  color: #fff;
-  font-size: 70px;
+  color: #000;
+  font-size: 100px;
   margin: 40px 0px 20px;
   border-radius: 3px;
-  text-shadow: 0 5px 8px rgba(0,0,0,0.2) ;
+  text-shadow: 0px 0px 20px #fff, 0px 0px 20px #fff;
 
 }
 #counter {
@@ -41,8 +41,6 @@ h8 {
   justify-content: center;
   align-items: center;
 }
-
-
 
 .modal {
 
@@ -147,7 +145,7 @@ h8 {
 display: flex;
 flex-direction: column;
 text-align: center;
-text-shadow: 0 5px 8px rgba(0,0,0.2);
+
 
 }
 
@@ -158,14 +156,14 @@ text-shadow: 0 5px 8px rgba(0,0,0.2);
   margin: 3% auto;
   width: 70%;
   box-shadow: 0 5px 8px rgba(0,0,0.2);
-  line-height: 300px;
+  line-height: 290px;
  
 }
 
 #bgg  {
   position:absolute;
   z-index: -1;
- height: 71%;
+ height: 70%;
  width: 70%;
 }
 
