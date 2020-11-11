@@ -4,7 +4,7 @@ function startTime () {
 var name = document.getElementById("namec").value
 
 
-var background = document.getElementById("newh").src;
+var background = document.getElementById().src;
 
     var date = document.getElementById("date").value
     var time = document.getElementById("time").value
