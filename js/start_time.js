@@ -16,6 +16,7 @@ function startTime() {
      console.log(cb);
 
 
+    
     var countDownDate = cdd;
 
     var header = cn;
@@ -50,7 +51,9 @@ function startTime() {
 
  document.getElementById("countname").innerHTML = header;
 
- document.getElementById("bgg").src = background;
+ document.getElementById("bgg").src =  background ;
+
+ 
 
 };
 

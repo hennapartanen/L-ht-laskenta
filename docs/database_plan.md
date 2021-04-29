@@ -4,8 +4,8 @@
 
 * uid (PRIMARY KEY)
 * username (text 50)
-* password (text 100)
-* email  (text 200)
+* password (text 255)
+* email  (text 255)
 
 ## counters
 

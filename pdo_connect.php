@@ -3,7 +3,7 @@
 $servername = "localhost";
 $db_username = "root";
 $db_password = "";
-$db = "countdownapp";
+$db = "votedb";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$db", $db_username, $db_password);
