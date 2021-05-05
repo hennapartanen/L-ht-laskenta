@@ -19,11 +19,10 @@ USE `votedb` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `votedb`.`user` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `username` VARCHAR(50) NOT NULL,
+  `username` VARCHAR(45) NOT NULL,
   `pwd` VARCHAR(255) NOT NULL,
-  `email` VARCHAR(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `username_UNIQUE` (`username` ASC))
+  `email` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
@@ -32,12 +31,12 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `votedb`.`poll` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `topic` MEDIUMTEXT NOT NULL,
+  `topic` VARCHAR(50) NOT NULL,
   `start` DATETIME NULL,
   `end` DATETIME NULL,
-  `user_id` INT UNSIGNED NOT NULL,
+  `user_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_poll_user` (`user_id` ASC) ,
+  INDEX `fk_poll_user` (`user_id` ASC),
   CONSTRAINT `fk_poll_user`
     FOREIGN KEY (`user_id`)
     REFERENCES `votedb`.`user` (`id`)
@@ -54,9 +53,9 @@ CREATE TABLE IF NOT EXISTS `votedb`.`option` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
   `votes` INT NOT NULL,
-  `poll_id` INT UNSIGNED NOT NULL,
+  `poll_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_poll_option_idx` (`poll_id` ASC) ,
+  INDEX `fk_poll_option` (`poll_id` ASC),
   CONSTRAINT `fk_poll_option`
     FOREIGN KEY (`poll_id`)
     REFERENCES `votedb`.`poll` (`id`)

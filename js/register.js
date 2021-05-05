@@ -32,16 +32,17 @@ function registerNewUser(event){
     }
 
     let ajax = new XMLHttpRequest();
+    ajax.responseType = 'json';
     ajax.onload = function(){
-           const data = JSON.parse(this.responseText);
+           var data = JSON.parse(this.responseText);
            if (data.hasOwnProperty('success')) {
-               window.location.href("login.php?type=success&msg=Rekistöröityminen onistui! Voit kirjautua uusilla tunnuksillasi");
+               window.location.href = "login.php?type=success&msg=Rekistöröityminen onnistui! Voit kirjautua uusilla tunnuksillasi";
            } else {
-               alert(data.error);
+               showMessage('error', data.error);
 
            }
     }
-ajax.open("POST", "registerNewUser.php", true);
-ajax.setRequestHeader("Content-type", "application/x.www.form-urlencoded");
+ajax.open("POST", "backend/registerNewUser.php", true);
+ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 ajax.send("username="+username+"&passwd="+passwd+"&email="+email);
 }

@@ -36,7 +36,7 @@ if($stmt->execute() == false) {
 
 }else {
     $data = array(
-        'success' => 'Uusi käyttäkäjä tsllernnettu'
+        'success' => 'Uusi käyttäjä tallennettu'
          );
     }
 } catch(PDOException $e) {
@@ -44,10 +44,14 @@ if($stmt->execute() == false) {
       $data = array(
           'error' => 'Käyttäjä on jo olemamssa'
       );
+  } else {
+    $data = array(
+        'error' => 'Tapahtui joku virhe tallennuksessa'
+    );
   }
 }
 
 
 header("Content-type: application/json;charset=utf-8");
-echo json_decode($data);
+echo json_encode($data);
 
