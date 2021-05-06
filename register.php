@@ -58,7 +58,7 @@
     <input class="form-control" type="password" name="passwd2">
 
     <label for="email"> Email</label>
-    <input class="form-control" type="email" name="email">
+    <input class="form-control" type="text" name="email">
 
 
     <button type="submit" class="btn btn-primary">Register</button>
@@ -71,7 +71,7 @@
 
 <script src="js/common.js"></script>
 <script src="js/register.js"></script>
-
-
+<script src="backend/pdo_connect.php"></script>
+<script src="backend/registerNewUser.php"></script>
 </body>
 </html>

@@ -8,9 +8,9 @@ if (urlParams.has('msg') && urlParams.has('type')) {
     const type = urlParams.get('type');
 
     showMessage(type, msg);
-}
+};
 
-document.forms['login'].addEveventlistener('submit', loginUser);
+document.forms['login'].addEventlistener('submit', loginUser);
 
 function loginUser(event){
     event.preventDefault();
@@ -35,7 +35,7 @@ function loginUser(event){
            } else {
                showMessage('error', data.error);
 
-   ajax.open("POST", "backend/kissa.php", true);
+   ajax.open("POST", "backend/loginUser.php", true);
    ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
    ajax.send(`username=${username}"&passwd=${passwd}`);
                }

@@ -35,12 +35,13 @@
 
 </script>
 <div class="jumbotron">
+<form name="login">
+  <fieldset>
     <h1> Login to CounterApp </h1>
     </div>
 
     <div class="container">
 
-    <form action="check_login.php" method="post">
     <div class="form-group">
     
     <label for="username"> Username</label>
@@ -51,13 +52,14 @@
 
     </div>
 
-    <input type="submit" class="btn btn-primary" value="Login" >
+    <input type="submit" class="btn btn-primary" value="submit" >
 
+    </fieldset>
     
     </form>
 
-<script src=".js/common.js"></script>
-<script src=".js/jquery.min.js"></script>
-<script src=".js/bootstrap.min.css"></script>
+<script src="js/common.js"></script>
+<script src="js/login.js"></script>
+
 </body>
 </html>

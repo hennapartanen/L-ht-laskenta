@@ -1,8 +1,8 @@
 <?php
 
 
-if (!isset($_POST['username']) || !isset($_POST['passwd']) || !isset($_POST['passwd2']) || !isset($_POST['email']))
-{$data = array(
+if (!isset($_POST['username']) || !isset($_POST['passwd']) || !isset($_POST['passwd2']) || !isset($_POST['email'])){
+    $data = array(
     'error' => 'POST-dataa ei ole saatavilla'
 );
   
@@ -22,7 +22,7 @@ include_once 'pdo_connect.php';
 
 try {
     $stmt = $conn->prepare("INSERT INTO user (username, pwd, email) 
-             VALUES (:username, :pwd, :email); ");
+             VALUES (:username, :passwd, :email); ");
 
 $stmt->bindParam(':username', $username);
 $stmt->bindParam(':pwd', $passwd);

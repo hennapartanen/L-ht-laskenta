@@ -1,6 +1,6 @@
 
 
-document.forms['register'],addEventListener('submit', registerNewUser);
+document.forms['register'].addEventListener('submit', registerNewUser);
 
 function registerNewUser(event){
 
@@ -32,9 +32,9 @@ function registerNewUser(event){
     }
 
     let ajax = new XMLHttpRequest();
-    ajax.responseType = 'json';
+    
     ajax.onload = function(){
-           var data = JSON.parse(this.responseText);
+           const data = JSON.parse(this.responseText);
            if (data.hasOwnProperty('success')) {
                window.location.href = "login.php?type=success&msg=Rekistöröityminen onnistui! Voit kirjautua uusilla tunnuksillasi";
            } else {
@@ -44,5 +44,5 @@ function registerNewUser(event){
     }
 ajax.open("POST", "backend/registerNewUser.php", true);
 ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-ajax.send("username="+username+"&passwd="+passwd+"&email="+email);
+ajax.send("username="+username+"&passwd="+passwd);
 }
