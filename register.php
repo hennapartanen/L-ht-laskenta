@@ -31,6 +31,11 @@
       </div>
 </nav>
 
+<div class="jumbotron">
+<h1> Register to CounterApp </h1>
+</div>
+
+<div class="container">
 
 <div id="msg" class="alert alert-dismissible alert-warning d-none">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -38,40 +43,37 @@
   <p class="mb-0"></a></p>
 </div>
 
-<div class="jumbotron">
 <form name="register">
   <fieldset>
-    <h1> Register to CounterApp </h1>
-    </div>
-
-    <div class="container">
+  
+    <div class="form-group">
+      <label for="username"> Username</label>
+      <input class="form-control" type="text" name="username">
+  </div>
 
     <div class="form-group">
-    
-    <label for="username"> Username</label>
-    <input class="form-control" type="text" name="username">
+      <label for="passwd"> Password </label>
+      <input class="form-control" type="password" name="passwd">
+    </div>
 
-    <label for="passwd"> Password </label>
-    <input class="form-control" type="password" name="passwd">
+    <div class="form-group">
+      <label for="passwd2"> Confirm password</label>
+      <input class="form-control" type="password" name="passwd2">
+    </div>
 
-    <label for="passwd2"> Confirm password</label>
-    <input class="form-control" type="password" name="passwd2">
-
-    <label for="email"> Email</label>
-    <input class="form-control" type="text" name="email">
-
+    <div class="form-group">
+      <label for="email"> Email</label>
+      <input class="form-control" type="text" name="email">
+   </div>
 
     <button type="submit" class="btn btn-primary">Register</button>
-
-  </fieldset>
+       </fieldset>
     </form>
-    </div>
+  </div>
 
     
 
 <script src="js/common.js"></script>
 <script src="js/register.js"></script>
-<script src="backend/pdo_connect.php"></script>
-<script src="backend/registerNewUser.php"></script>
 </body>
 </html>

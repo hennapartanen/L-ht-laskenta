@@ -4,10 +4,8 @@
 if (!isset($_POST['username']) || !isset($_POST['passwd']) || !isset($_POST['passwd2']) || !isset($_POST['email'])){
     $data = array(
     'error' => 'POST-dataa ei ole saatavilla'
-);
-  
-    die();
-    
+    );
+
 }
 
 $username = htmlspecialchars($_POST['username']);
@@ -16,8 +14,6 @@ $email = htmlspecialchars($_POST['email']);
 
 
 include_once 'pdo_connect.php';
-
-
 
 
 try {
@@ -29,12 +25,12 @@ $stmt->bindParam(':pwd', $passwd);
 $stmt->bindParam(':email', $email);
 
 
-if($stmt->execute() == false) {
+if($stmt->execute() == false){
     $data = array(
         'error' => 'Tapahtui joku virhe lel'
     );
 
-}else {
+} else {
     $data = array(
         'success' => 'Uusi käyttäjä tallennettu'
          );

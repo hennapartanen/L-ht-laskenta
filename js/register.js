@@ -36,7 +36,7 @@ function registerNewUser(event){
     ajax.onload = function(){
            const data = JSON.parse(this.responseText);
            if (data.hasOwnProperty('success')) {
-               window.location.href = "login.php?type=success&msg=Rekistöröityminen onnistui! Voit kirjautua uusilla tunnuksillasi";
+               window.location.href = "login.php?type=success&msg=Rekistöröityminen onnistui! ";
            } else {
                showMessage('error', data.error);
 
@@ -44,5 +44,5 @@ function registerNewUser(event){
     }
 ajax.open("POST", "backend/registerNewUser.php", true);
 ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-ajax.send("username="+username+"&passwd="+passwd);
+ajax.send("username="+username+"&passwd="+passwd+"&email="+email);
 }

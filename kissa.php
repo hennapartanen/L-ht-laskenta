@@ -48,4 +48,5 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="css/bootstrap.min.css"></script>
+<script src="js/login.js"></script>
 </html>

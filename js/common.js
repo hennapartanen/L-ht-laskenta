@@ -13,6 +13,6 @@ function showMessage(type, msg){
         msgBox.classList.add('alert-danger');
     }
 
-    msg.querySelector('p').innerHTML = msg;
+    msgBox.querySelector('p').innerHTML = msg;
     msgBox.classList.remove('d-none');
 }
