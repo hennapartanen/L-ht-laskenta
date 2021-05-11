@@ -1,6 +1,7 @@
 <?php
 
 
+
 if (!isset($_POST['username']) || !isset($_POST['passwd']) || !isset($_POST['passwd2']) || !isset($_POST['email'])){
     $data = array(
     'error' => 'POST-dataa ei ole saatavilla'
@@ -18,7 +19,7 @@ include_once 'pdo_connect.php';
 
 try {
     $stmt = $conn->prepare("INSERT INTO user (username, pwd, email) 
-             VALUES (:username, :passwd, :email); ");
+             VALUES (:username, :pwd, :email); ");
 
 $stmt->bindParam(':username', $username);
 $stmt->bindParam(':pwd', $passwd);
@@ -38,13 +39,9 @@ if($stmt->execute() == false){
 } catch(PDOException $e) {
   if (strpos($e->getMessage(), '1062 Duplicate entry')){
       $data = array(
-          'error' => 'Käyttäjä on jo olemamssa'
+          'error' => 'Käyttäjänimi tai sähköpostiosoite on jo olemassa'
       );
-  } else {
-    $data = array(
-        'error' => 'Tapahtui joku virhe tallennuksessa'
-    );
-  }
+  } 
 }
 
 

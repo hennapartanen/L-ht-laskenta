@@ -1,28 +1,20 @@
 
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString)
 
-
-if (urlParams.has('msg') && urlParams.has('type')) {
-    const msg = urlParams.get('msg');
-    const type = urlParams.get('type');
-
-    showMessage(type, msg);
-};
-
-document.forms['login'].addEventlistener('submit', loginUser);
+document.forms['login'].addEventListener('submit', loginUser);
 
 function loginUser(event){
+
     event.preventDefault();
+    
     const username = document.forms['login']['username'].value;
     const passwd = document.forms['login']['passwd'].value;
 
-    if (username.lenght <= 0) {
+    if (username.length <= 0) {
         showMessage('error', 'Username is required');
         return;
     }
 
-    if (passwd.lenght <= 4) {
+    if (passwd.length <= 3) {
         showMessage('error','Password minium length is 4 characters');
         return;
     }
@@ -32,12 +24,15 @@ function loginUser(event){
            const data = JSON.parse(this.responseText);
            if (data.hasOwnProperty('success')) {
                window.location.href = "kissa.php?type=success&msg=Welcome";
+               return;
            } else {
-               showMessage('error', data.error);
+               showMessage('error', 'Kirjautuminen epäonnistui!');
+
+            }
+        }
 
    ajax.open("POST", "backend/loginUser.php", true);
    ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
    ajax.send(`username=${username}"&passwd=${passwd}`);
-               }
-            }
+             
         }

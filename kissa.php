@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +39,10 @@
 
     <div class="jumbotron">
         <h1 class="display-3">You dont have any counters</h1>
+        <?php id (isset($_SESSION['logged_in'])) ?>
+        <p><?php echo $_SESSION['username']; ?></p>
+        <?php endif; ?>
+        
         <p class="lead">Add counters from button belove</p>
         
   

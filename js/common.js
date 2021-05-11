@@ -1,4 +1,16 @@
 
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString)
+
+
+if (urlParams.has('msg') && urlParams.has('type')) {
+    const msg = urlParams.get('msg');
+    const type = urlParams.get('type');
+
+    showMessage(type, msg);
+};
+
 function showMessage(type, msg){
 
     let msgBox= document.getElementById("msg");
@@ -6,7 +18,7 @@ function showMessage(type, msg){
     if (type == 'success') {
         msgBox.classList.remove('alert-danger');
         msgBox.classList.add('alert-success');
-        msgBox.querySelector('h4').innerHTML = "success!"
+        msgBox.querySelector('h4').innerHTML = "success"
     } else if(type == 'error') {
         msgBox.querySelector('h4').innerHTML = "Error"
         msgBox.classList.remove('alert-success');
@@ -16,3 +28,4 @@ function showMessage(type, msg){
     msgBox.querySelector('p').innerHTML = msg;
     msgBox.classList.remove('d-none');
 }
+

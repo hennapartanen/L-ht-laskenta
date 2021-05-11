@@ -11,12 +11,12 @@ function registerNewUser(event){
     const passwd2 = document.forms['register']['passwd2'].value;
     const email = document.forms['register']['email'].value;
 
-    if (username.lenght <= 0) {
+    if (username.length <= 0) {
         showMessage('error', 'Username is required');
         return;
     }
 
-    if (passwd.lenght <= 4) {
+    if (passwd.length <= 4) {
         showMessage('error','Password minium length is 4 characters');
         return;
     }
@@ -26,7 +26,7 @@ function registerNewUser(event){
         return;
     }
 
-    if (email.lenght <= 0) {
+    if (email.length <= 0) {
         showMessage('error','Email is required');
         return;
     }

@@ -33,33 +33,40 @@
       </div>
 </nav>
 
-</script>
+
 <div class="jumbotron">
+<h1> Login to CounterApp </h1>
+</div>
+
+<div class="container">
+
+<div id="msg" class="alert alert-dismissible alert-warning d-none">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4 class="alert-heading">Warning!</h4>
+  <p class="mb-0"></a></p>
+</div>
+
 <form name="login">
   <fieldset>
-    <h1> Login to CounterApp </h1>
-    </div>
-
-    <div class="container">
+  
+    <div class="form-group">
+      <label for="username"> Username</label>
+      <input class="form-control" type="text" name="username">
+  </div>
 
     <div class="form-group">
-    
-    <label for="username"> Username</label>
-    <input class="form-control" type="text" name="username">
-
-    <label for="passwd"> Password </label>
-    <input class="form-control" type="password" name="passwd">
-
+      <label for="passwd"> Password </label>
+      <input class="form-control" type="password" name="passwd">
     </div>
 
-    <input type="submit" class="btn btn-primary" value="submit" >
-
-    </fieldset>
-    
+    <button type="submit" class="btn btn-primary">login</button>
+       </fieldset>
     </form>
+  </div>
 
-<script src="js/common.js"></script>
+
 <script src="js/login.js"></script>
+<script src="js/common.js"></script>
 
 </body>
 </html>
