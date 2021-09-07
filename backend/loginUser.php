@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+
 
 if (!isset($_POST['username']) || !isset($_POST['passwd'])){
     $data = array(
@@ -10,7 +10,7 @@ if (!isset($_POST['username']) || !isset($_POST['passwd'])){
 }
 
 $username = htmlspecialchars($_POST['username']);
-$passwd = password_hash($_POST['passwd'], PASSWORD_DEFAULT);
+$passwd = $_POST['passwd'];
 
 include_once 'pdo_connect.php';
 
@@ -31,7 +31,7 @@ if($stmt->execute() == false){
         
         if (password_verify($passwd, $result['pwd'])) {
             $data = array(
-                'success'=> 'Kirjautuminen onnistui!'
+                'success' => 'Kirjautuminen onnistui!'
             );
 
             $_SESSION['logged_in'] = true;
@@ -42,9 +42,9 @@ if($stmt->execute() == false){
             $data = array(
                 'error'=> 'Salasana on väärä!'
             );
-            }
-        }
-    } catch(PDOException $e) {
+         }
+    }
+} catch(PDOException $e) {
  
       $data = array(
           'error' => 'Tapahtui joku virhe'

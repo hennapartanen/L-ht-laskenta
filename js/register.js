@@ -16,7 +16,7 @@ function registerNewUser(event){
         return;
     }
 
-    if (passwd.length <= 4) {
+    if (passwd.length <= 3) {
         showMessage('error','Password minium length is 4 characters');
         return;
     }

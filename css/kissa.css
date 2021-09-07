@@ -102,15 +102,16 @@ h8 {
 
 #count_name {
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 30px;
+  text-align: center;
 }
 
 
-#namec {
+#name {
   width: 30%;
   padding: 12px 20px;
   margin: 8px 0;

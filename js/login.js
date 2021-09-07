@@ -1,5 +1,6 @@
 
 
+
 document.forms['login'].addEventListener('submit', loginUser);
 
 function loginUser(event){
@@ -22,7 +23,8 @@ function loginUser(event){
     let ajax = new XMLHttpRequest();
     ajax.onload = function(){
            const data = JSON.parse(this.responseText);
-           if (data.hasOwnProperty('success')) {
+           console.log(data);
+           if (data.hasOwnProperty('success')){
                window.location.href = "kissa.php?type=success&msg=Welcome";
                return;
            } else {
@@ -33,6 +35,6 @@ function loginUser(event){
 
    ajax.open("POST", "backend/loginUser.php", true);
    ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-   ajax.send(`username=${username}"&passwd=${passwd}`);
+   ajax.send(`username=${username}&passwd=${passwd}`);
              
         }

@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CounterApp - New counter </title>
-    <link rel="stylesheet" href="./css/kissa.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-
-    
-</head>
-<body onload="startTime()">
+<?php session_start(); ?>
+<?php include_once 'layout/top.inc.php'; ?>
+<?php include_once 'layout/nav.inc.php'; ?>
 
     
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -47,8 +38,5 @@
 
 </div>
 
-  <script src="js/start_time.js" ></script>
-  
-</body>
-
-</html>
+ 
+<?php include_once 'layout/bottom.inc.php'; ?>
