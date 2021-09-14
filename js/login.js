@@ -1,6 +1,4 @@
 
-
-
 document.forms['login'].addEventListener('submit', loginUser);
 
 function loginUser(event){
@@ -35,6 +33,6 @@ function loginUser(event){
 
    ajax.open("POST", "backend/loginUser.php", true);
    ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-   ajax.send(`username=${username}&passwd=${passwd}`);
+   ajax.send("username="+username+"&passwd="+passwd);
              
         }

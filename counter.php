@@ -1,11 +1,4 @@
 <?php session_start(); ?>
-<?php 
-if (isset($_SESSION['logged_in'])){
-  header("Location: login.php");
-  die();
-}
-?>
-
 <?php include_once 'layout/top.inc.php'; ?>
 <?php include_once 'layout/nav.inc.php'; ?>
 
@@ -25,8 +18,8 @@ if (isset($_SESSION['logged_in'])){
   <fieldset>
   
     <div class="form-group">
-      <label for="name"> Name</label>
-      <input class="form-control" type="text" name="name">
+      <label for="topic"> Name</label>
+      <input class="form-control" type="text" name="topic">
   </div>
 
     <div class="form-group">
@@ -42,30 +35,6 @@ if (isset($_SESSION['logged_in'])){
     <button type="submit" class="btn btn-primary">Start counter</button>
        </fieldset>
     </form>
-  </div>
-
-
-<div id= "kuvia" >
-
-  <img src="pics/newyear.jpg" id="new" style="display:none;">
-  <img src="pics/christmas.jpg" id="chris" style="display:none;">
-  <img src="pics/vacation.jpg" id="vac" style="display:none;">
-  <img src="pics/emt.jpg" id="emt" style="display:none;">
-  
-</div>
-
-
-  <button id="modalBtn" class="btn btn-primary "> Choose a background</button>
-
-<div id="simpleModal" class="modal">
-  <div class="modal-content">
-  <span id="closeBtn">&times;</span>
-  <img src="pics/newyear.jpg" id= "newh" value="new" onclick="showpicn()" >
-  <img src="pics/christmas.jpg" id="chrish" value="cri" onclick="showpicc()" >
-  <img src="pics/vacation.jpg" id="vach" value="vac" onclick="showpicv()">
-  <img src="pics/emt.jpg" id="emth" value="emt" onclick="showpice()">
-
-
   </div>
 
  
